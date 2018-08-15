@@ -1,0 +1,19 @@
+control+shift+alt+j
+
+Form Side:
+g_form.setValue("instance",'');
+
+Scripty side:
+//Incident closer, add your own query
+
+var queryString ='active=false^stateNOT IN6,7,10';
+
+
+var gr = new GlideRecord('incident');
+gr.addEncodedQuery(queryString);
+gr.query();
+while (gr.next()) {
+  gr.state=7;
+  gr.setWorkflow(false);
+  gr.update();
+}

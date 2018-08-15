@@ -1,0 +1,25 @@
+function onLoad() {
+   //Type appropriate comment here, and begin script below
+		
+	var webURL = this.location.href;
+
+	if(webURL.indexOf("alcs")>-1){
+		g_form.setValue("enquiry_type","Access to Lecture Capture system");		
+	}
+	else if(webURL.indexOf("llr")>-1){
+		g_form.setValue("enquiry_type","LMS linking to recordings");		
+	}
+	else if(webURL.indexOf("mlcb")>-1){
+		g_form.setValue("enquiry_type","Modify an existing Lecture Capture booking");	
+	}
+	else if(webURL.indexOf("rus")>-1){
+		g_form.setValue("enquiry_type","Recording is unavailable in system");		
+	}
+	else if(webURL.indexOf("avir")>-1){
+		g_form.setValue("enquiry_type","Audio/Visual issue with a recording");
+	}	
+	else if(webURL.indexOf("soof")>-1){
+		g_form.setValue("enquiry_type","Submit opt-out form");
+	}	
+	   
+}
