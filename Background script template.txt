@@ -1,9 +1,3 @@
-control+shift+alt+j
-
-Form Side:
-g_form.setValue("instance",'');
-
-Scripty side:
 //Incident closer, add your own query
 
 var queryString ='active=false^stateNOT IN6,7,10';

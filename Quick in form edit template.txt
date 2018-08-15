@@ -1,0 +1,4 @@
+control+shift+alt+j
+
+Form Side:
+g_form.setValue("instance",'');
