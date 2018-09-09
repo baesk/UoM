@@ -1,0 +1,11 @@
+var gr = new GlideRecord('sys_history_line')
+
+gr.addQuery('sys_id','Wrire down the sysid of record of worknote'); 
+
+gr.query();
+
+if(gr.next()){
+
+gr.deleteRecord();
+
+}
