@@ -1,0 +1,9 @@
+
+Edit:
+/sys_journal_field_list.do?sysparm_query=element_id=sys_id of ticket
+/sys_audit_list.do?sysparm_query=documentkey=sys_id of ticket
+
+Delete
+/sys_history_set_list.do?sysparm_query=id=sys_id of ticket
+
+this will rebuild the activity log upon reload
