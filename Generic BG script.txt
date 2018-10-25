@@ -1,0 +1,5 @@
+var kbArticle = new GlideRecord('kb_knowledge');
+kbArticle.get('ce85aea2db67d3c4f397bc5a3a9619f2');
+
+gs.info(kbArticle.short_description);
+

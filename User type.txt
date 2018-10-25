@@ -1,0 +1,5 @@
+var gr = new GlideRecord('sys_user');
+if(gr.get('df195d884fb5620090a0eefe0310c7d9')){
+gr.u_user_type = 'staff';
+gr.update();
+}
