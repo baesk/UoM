@@ -1,0 +1,22 @@
+// Incident closer, add your own query
+var queryString = 'active=false^stateNOT IN6,7,10';
+var gr = new GlideRecord('incident');
+gr.addEncodedQuery(queryString);
+gr.setWorkflow(false);
+gr.query();
+while (gr.next()) {
+    gr.state = 7;
+    updateChild(gr);
+    gr.update();
+}
+ 
+function updateChild (parent) {
+    var child = new GlideRecord('<TABLE_NAME_HERE>');
+    child.addQuery('parent', parent.getUniqueValue());
+    child.setWorkflow(false);
+    child.query();
+    while (child.next()) {
+       child.state = 7;
+        child.update();
+    }
+}
